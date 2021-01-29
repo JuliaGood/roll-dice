@@ -1,17 +1,11 @@
 import React, {Component} from 'react';
+import './Die.css';
 
 class Die extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      num : 9
-    }
-  }
-
   render() {
     return(
       <div>
-        <i className="fas fa-dice-one"></i>
+        <i className={`Die fas fa-dice-${this.props.face}`}></i>
       </div>
     )
   }
