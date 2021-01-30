@@ -9,6 +9,7 @@ class Rolldice extends Component{
   constructor(props) {
     super(props);
     this.state = {
+      // initial state 
       die1: 'one',
       die2: 'one'
     }
@@ -29,9 +30,11 @@ class Rolldice extends Component{
 
   render() {
     return(
-        <div>
-          <Die face={this.state.die1}/>
-          <Die face={this.state.die2}/>
+        <div className="Rolldice">
+          <div className='Rolldice-box'>
+            <Die face={this.state.die1}/>
+            <Die face={this.state.die2}/>
+          </div>
           <button onClick={this.roll}>Roll Dice!</button>
         </div>
     )
